@@ -1,0 +1,20 @@
+{
+  "id": "agent-summary-hook",
+  "name": "Agent Summary Hook",
+  "description": "Records outbound assistant bursts and sends Telegram blockquote summaries after quiet periods.",
+  "contracts": {},
+  "activation": {
+    "onStartup": true
+  },
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": true,
+    "properties": {
+      "enabled": { "type": "boolean", "default": true },
+      "sendFromGatewayTimer": { "type": "boolean", "default": false },
+      "checkEveryMs": { "type": "integer", "minimum": 30000, "default": 60000 },
+      "statePath": { "type": "string" },
+      "openclawBin": { "type": "string", "default": "openclaw" }
+    }
+  }
+}

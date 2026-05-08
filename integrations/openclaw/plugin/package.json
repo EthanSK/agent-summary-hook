@@ -1,0 +1,15 @@
+{
+  "name": "@ethansk/openclaw-agent-summary-hook-adapter",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "agent-summary-hook": "file:../../.."
+  },
+  "openclaw": {
+    "extensions": ["./src/index.ts"],
+    "compat": {
+      "pluginApi": ">=2026.3.24-beta.2"
+    }
+  }
+}

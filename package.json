@@ -1,0 +1,45 @@
+{
+  "name": "agent-summary-hook",
+  "version": "0.1.0",
+  "description": "Cross-harness assistant burst summary hook engine for OpenClaw and Claude Code.",
+  "type": "module",
+  "bin": {
+    "agent-summary-hook": "bin/agent-summary-hook.js"
+  },
+  "exports": {
+    ".": "./src/index.js",
+    "./adapters/openclaw": "./src/adapters/openclaw.js",
+    "./adapters/claude-code": "./src/adapters/claude-code.js"
+  },
+  "files": [
+    "bin/",
+    "src/",
+    "integrations/",
+    "docs/",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test test/*.test.js",
+    "smoke": "node test/smoke.js"
+  },
+  "keywords": [
+    "agent",
+    "hook",
+    "openclaw",
+    "claude-code",
+    "telegram",
+    "summary",
+    "agent-bridge"
+  ],
+  "author": "EthanSK",
+  "license": "MIT",
+  "homepage": "https://github.com/EthanSK/agent-summary-hook",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/EthanSK/agent-summary-hook.git"
+  },
+  "engines": {
+    "node": ">=22.0.0"
+  }
+}

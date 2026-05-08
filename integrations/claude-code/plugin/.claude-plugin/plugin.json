@@ -1,0 +1,9 @@
+{
+  "name": "agent-summary-hook",
+  "version": "0.1.0",
+  "description": "Claude Code hook adapter for recording assistant bursts and voice-note boundaries. Requires the agent-summary-hook CLI for idle delivery checks.",
+  "author": {
+    "name": "EthanSK",
+    "url": "https://github.com/EthanSK/agent-summary-hook"
+  }
+}

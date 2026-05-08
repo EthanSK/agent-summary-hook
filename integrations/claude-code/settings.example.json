@@ -1,0 +1,28 @@
+{
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node /Users/ethansk/Projects/agent-summary-hook/bin/agent-summary-hook.js claude-user-prompt",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node /Users/ethansk/Projects/agent-summary-hook/bin/agent-summary-hook.js claude-stop",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  }
+}
