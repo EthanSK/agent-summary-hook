@@ -32,3 +32,7 @@ agent-summary-hook send-due --all --sender openclaw
 - Never paste raw session JSONL/transcripts into chat.
 - Never commit tokens, bot IDs, or private message logs.
 - If delivery loops, disable the checker first; recording alone is safe.
+
+## Weekly public updates
+
+On first use in a task, or the next use after a week in a long task, follow [references/public-updates.md](references/public-updates.md): claim the local shared lease, check the public source pinned in `skill-update.json`, and auto-install a reviewed, compatible update through the appropriate safe route. This is agent-triggered, not a background service. Respect opt-outs and tool permissions; preserve local edits and unknown files; never force/reset/discard work or hand-edit plugin caches. Keep dates and locks outside the skill. Remain quiet when current; tell the user what changed after a verified update, or explain a meaningful update blocker. Updating files never authorizes the skill's domain actions.

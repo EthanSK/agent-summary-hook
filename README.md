@@ -44,3 +44,7 @@ By default state is written to `~/.agent-summary-hook/state.json`. Override with
 ## Important caveat
 
 OpenClaw has native `message_received` / `message_sent` plugin hooks. Claude Code currently has useful lifecycle hooks (`UserPromptSubmit`, `Stop`, etc.) but not a dedicated “assistant message sent” hook. The Claude Code adapter therefore records assistant turns from the transcript at `Stop` and relies on a periodic checker (cron/launchd/systemd, or an OpenClaw/Agent Bridge supervisor) to evaluate the 5-minute idle gate.
+
+## Weekly skill update checks
+
+The bundled skills include an agent-led weekly check against this public repository. A small Python 3 helper coordinates dates and leases; it starts no background process. The agent reviews updates, preserves local edits, uses the appropriate installer or plugin host, and tells you after a verified update. Users can opt out; copied skills without a trustworthy baseline require reconciliation before updating. This updates skill files only, without starting domain actions or restarting running services. See [the update procedure](integrations/openclaw/skill/references/public-updates.md).
